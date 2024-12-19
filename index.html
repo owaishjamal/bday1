@@ -1,172 +1,210 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
-<!--[if gt IE 8]> <html> <![endif]-->
-<!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
+<html lang="en">
 <head>
-	<title>Happy Birthday</title>
-	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday Xola">
-	<meta name="robots" content="index, follow" />
-	<link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
-    <meta name="keywords" content="Birthday, Happy">
-    <!-- Strat of Facebook Meta -->
-    <meta property="og:type" content="E-Greeting" />
-    <meta property="og:image" content="favicon.ico" />
-    <meta property="og:description" content="Wish you a very Happy Birthday">
-    <!-- End of Facebook Meta Tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="loading.css">
-	<link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
-	<link rel="stylesheet/less" href="cake.less">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Gift</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('ab.jpg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            border-bottom: 2px solid #ccc;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            animation: textGlow 2s infinite alternate;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+            animation: bounce 2s infinite;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+            animation: fadeInDown 1.5s;
+        }
+        .section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .gift-section {
+            background: url('.jpg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            border: 2px solid #ddd;
+        }
+        .gift-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(169, 205, 237, 0.6);
+            z-index: 1;
+        }
+        .gift-section .section-content {
+            position: relative;
+            z-index: 2;
+        }
+        .gift-section a {
+            color: #0b0a0a;
+            text-decoration: underline;
+        }
+        .umrah-section {
+            background: #abadaf;
+        }
+        .umrah-section ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .umrah-section li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .umrah-section li::before {
+            content: '\2022';
+            color: #99bce2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .cake-section {
+            background: #edd690;
+            color: #333;
+        }
+        .cake-section a {
+            color: #333;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 5px #007bff, 0 0 10px #007bff, 0 0 15px #007bff;
+            }
+            100% {
+                text-shadow: 0 0 15px #0056b3, 0 0 20px #0056b3, 0 0 25px #0056b3;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<div class="loading"></div>
-	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
-	   Your browser isn't invited for super fun audio time.
-    </audio>
-    <div class="balloons text-center" id="b1">
-    	<h2 style="color:#F2B300;">H</h2>
-    </div>
-    <div class="balloons text-center" id="b2">
-    	<h2 style="color:#0719D4;">B</h2>
-    </div>
-	<div class="balloons text-center" id="b3">
-    	<h2 style="color:#D14D39;">D</h2>
-    </div>
-	<div class="balloons text-center" id="b4">
-    	<h2 style="color:#8FAD00;">A</h2>
-    </div>
-	<div class="balloons text-center" id="b5">
-    	<h2 style="color:#8377E4;">I</h2>
-    </div>
-    <div class="balloons text-center" id="b6">
-    	<h2 style="color:#99C96A;">S</h2>
-    </div>
-    <div class="balloons text-center" id="b7">
-    	<h2 style="color:#20CFB4;">H</h2>
+    <div class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>A Special Gift for Someone Who Means the World and Akhirah to Me</h1>
+            <p>You are the best AYESH.</p>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToJourney()">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </div>
 
-    <img src="Balloon-Border.png" width="100%" class="balloon-border">
- 
+    <div class="section" data-aos="fade-up">
+        <h2>Our Journey</h2>
+        <p>Every moment with you is a cherished memory, except the haram ones which is more or less every moment but still go through our journey once.</p>
+        <a href="first.html">Explore the Journey</a>
+    </div>
 
-	<div class="container">
-		
-		<div class="row">
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_yellow"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_red"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_blue"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_green"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_pink"></div>
-			</div>
-			<div class="col-md-2 col-xs-2 bulb-holder">
-				<div class="bulb" id="bulb_orange"></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<img src="banner.png" class="bannar">
-			</div>
-		</div>
-		<div class="row cake-cover">
-			<div class="col-md-12 texr-center">
-				<div class="cake">
-				  <div class="velas">
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				    <div class="fuego"></div>
-				  </div>
-				  <div class="cobertura"></div>
-				  <div class="bizcocho"></div>
-				</div>
-			</div>
-		</div>
-		<div class="row message">
-			<div class="col-md-12">
-				<p>Okay so Ayesh today is not any special day,</p>
-				<p>But it is special not because today you were born,</p>
-				<p>but because it becomes a reason for me to make you feel special,</p>
-				<p>I don't care about your birthday,</p>
-				<p>I care about you feeling special.</p>
-				<p>You know you are the best person on this earth for me </p>
-					<p>because at the end of the day you are Ayesha and you are a part of me,</p>
-				<p>not in haram way but without you my dua is incomplete my iman is incomplete,</p>
-				<p>it is wrong I know but it's the truth.</p>
-				<p>But anyways it is about you and you only.</p>
-				<p>All I want and I am not asking anything from you I would ask from Allah that your Umrah goes best,</p>
-				<p>your iman becomes best,</p>
-				<p>your gunah is zero,</p>
-				<p>you are always protected inside and outside everywhere.</p>
-				<p>I am not allowed to ask anything from you so I am stopping here.</p>
-				<p>But you are the most important person for me even on the days you are not there.</p>
-				<p>I won't say happy birthday.</p>
-				<p>Explore the website and especially the Umrah webpage,</p>
-				<p>keep it with you during the trip!</p>
+    <div class="section gift-section" data-aos="fade-up">
+        <div class="section-content">
+            <h2>The Gift</h2>
+            <p>Although gifting is haram hence it's not actually a gift, you may return it afterwards.</p>
+            <a href="gift.html">Discover the Gift</a>
+        </div>
+    </div>
 
-				
-			</div>
-		</div>
-		<div class="navbar navbar-fixed-bottom">
-			<div class="row">
-				<div class="col-md-6 text-center col-md-offset-3">
-					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-					<button class="btn btn-primary" id="play">Ready?</button>
-					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
-					<button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
-					<button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
-					<button class="btn btn-primary" id="light_candle"> Light Candle</button>
-					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
-					<button class="btn btn-primary" id="story">A mesage for you</button>
-					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
-				</div>
-			</div>
-			<!-- <div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div>
-			<div class="col-md-2">
-			</div> -->
-		</div>
+    <div class="section cake-section" data-aos="fade-up">
+        <h2>Birthday Cake</h2>
+        <p>The cake is not there to cut, take care of it.</p>
+        <a href="index.html">See the Cake</a>
+    </div>
 
+    <div class="section umrah-section" data-aos="fade-up">
+        <h2>Umrah Guidance</h2>
+        <p>May your journey be blessed and your prayers accepted. Here's a brief guide to assist you:</p>
+        <ul>
+            <li>Ensure you have all necessary documents ready before boarding.</li>
+            <li>Stay hydrated and take care of your health during the journey.</li>
+            <li>Follow all guidelines and remain patient throughout the process.</li>
+            <li>Offer dua for yourself, your family, and all Muslims.</li>
+        </ul>
+        <a href="umrah.html">Learn More, Click here.</a>
+    </div>
 
-	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        function scrollToJourney() {
+            document.querySelector(".section").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="effect.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58229732-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </html>
