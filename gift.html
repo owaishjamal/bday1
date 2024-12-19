@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Gift</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(200, 200, 200, 0.7)), url('giftt.jpg') no-repeat center center/cover;
+            /* Replace 'your-image.jpg' with the actual image file name */
+            background: linear-gradient(to bottom, #f8f9fa, #d6e4f0);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .reveal-button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .reveal-button:hover {
+            background-color: #1f5f8a;
+        }
+        .hidden-content {
+            display: none;
+            animation: fadeIn 1s forwards;
+        }
+        .book-section {
+            display: none;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: slideIn 1s forwards;
+        }
+        .book-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .book-section h2 {
+            font-size: 2em;
+            color: #2980b9;
+            margin: 20px 0;
+        }
+        .note {
+            font-style: italic;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <script>
+        function revealGift() {
+            document.querySelector('.hidden-content').style.display = 'block';
+            document.querySelector('.book-section').style.display = 'block';
+        }
+    </script>
+</head>
+<body >
+    <div class="container">
+        <h1>Surprise! A Special Gift Awaits You</h1>
+        <p>
+            As you prepare for your blessed journey to Umrah, I wanted to share something meaningful
+            and close to my heart.
+        </p>
+        <button class="reveal-button" onclick="revealGift()">Reveal Gift</button>
+
+        <div class="hidden-content">
+            <div class="book-section">
+                <img src="book.webp" alt="The Ideal Muslimah">
+                <h2>The Ideal Muslimah</h2>
+                <p>
+                    This book beautifully encapsulates the virtues, strength, and wisdom of a Muslimah. It explores 
+                    the principles of faith, personal growth, and the role of a Muslim woman in society. With practical 
+                    advice and inspiring stories, it serves as a guide to becoming the best version of oneself.
+                </p>
+                <h3>Why I Chose This Book</h3>
+                <p>
+                    I chose this book because it resonates deeply with the values and character I admire in you. I hope it 
+                    inspires you further on your journey of self-improvement and spiritual growth.
+                </p>
+                <p class="note">
+                    Although giving gifts is haram, take this as an <b>udhar</b>. You may return it when you are done reading.
+                </p>
+            </div>
+
+            <p>
+                I tried my best to get it delivered before the 20th of December, but due to unforeseen delays,
+                it will be delivered once you return from Umrah.
+            </p>
+        </div>
+    </div>
+    <footer>
+        With heartfelt duas and love, always.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Gift</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('ab.jpg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            border-bottom: 2px solid #ccc;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            animation: textGlow 2s infinite alternate;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+            animation: bounce 2s infinite;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+            animation: fadeInDown 1.5s;
+        }
+        .section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .gift-section {
+            background: url('.jpg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            border: 2px solid #ddd;
+        }
+        .gift-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(169, 205, 237, 0.6);
+            z-index: 1;
+        }
+        .gift-section .section-content {
+            position: relative;
+            z-index: 2;
+        }
+        .gift-section a {
+            color: #0b0a0a;
+            text-decoration: underline;
+        }
+        .umrah-section {
+            background: #abadaf;
+        }
+        .umrah-section ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .umrah-section li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .umrah-section li::before {
+            content: '\2022';
+            color: #99bce2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .cake-section {
+            background: #edd690;
+            color: #333;
+        }
+        .cake-section a {
+            color: #333;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 5px #007bff, 0 0 10px #007bff, 0 0 15px #007bff;
+            }
+            100% {
+                text-shadow: 0 0 15px #0056b3, 0 0 20px #0056b3, 0 0 25px #0056b3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>A Special Gift for Someone Who Means the World and Akhirah to Me</h1>
+            <p>You are the best AYESH.</p>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToJourney()">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+        <h2>Our Journey</h2>
+        <p>Every moment with you is a cherished memory, except the haram ones which is more or less every moment but still go through our journey once.</p>
+        <a href="first.html">Explore the Journey</a>
+    </div>
+
+    <div class="section gift-section" data-aos="fade-up">
+        <div class="section-content">
+            <h2>The Gift</h2>
+            <p>Although gifting is haram hence it's not actually a gift, you may return it afterwards.</p>
+            <a href="gift.html">Discover the Gift</a>
+        </div>
+    </div>
+
+    <div class="section cake-section" data-aos="fade-up">
+        <h2>Birthday Cake</h2>
+        <p>The cake is not there to cut, take care of it.</p>
+        <a href="index.html">See the Cake</a>
+    </div>
+
+    <div class="section umrah-section" data-aos="fade-up">
+        <h2>Umrah Guidance</h2>
+        <p>May your journey be blessed and your prayers accepted. Here's a brief guide to assist you:</p>
+        <ul>
+            <li>Ensure you have all necessary documents ready before boarding.</li>
+            <li>Stay hydrated and take care of your health during the journey.</li>
+            <li>Follow all guidelines and remain patient throughout the process.</li>
+            <li>Offer dua for yourself, your family, and all Muslims.</li>
+        </ul>
+        <a href="umrah.html">Learn More, Click here.</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        function scrollToJourney() {
+            document.querySelector(".section").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

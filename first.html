@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+       body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(200, 200, 200, 0.7)), url('journey.jpg') no-repeat center center/cover;
+    /* Replace 'your-image.jpg' with the actual image file name */
+    color: #333;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+        .timeline {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .milestone {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding: 20px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .milestone:hover {
+            transform: translateY(-5px);
+        }
+        .milestone img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid #007bff;
+        }
+        .milestone .content {
+            flex: 1;
+        }
+        .milestone .date {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            background: #007bff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .milestone .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        .milestone:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .milestone:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #007bff;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        .timeline .milestone {
+            flex-direction: row;
+            position: relative;
+        }
+        .timeline .milestone:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .milestone .icon {
+            font-size: 3rem;
+            color: #007bff;
+            margin-right: 15px;
+        }
+        .milestone:nth-child(even) .icon {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body >
+    <div class="timeline">
+        <div class="milestone" data-aos="fade-right">
+            <i class="fas fa-school icon"></i>
+            <div class="content">
+                <div class="date">2011</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">Seeing you for the first time. I never knew you would be the one for whom I will put so much effort.</p>
+            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-left">
+            <i class="fas fa-city icon"></i>
+            <div class="content">
+                <div class="date">2013</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">Moved cities, and life changed.</p>
+            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-right">
+            <i class="fas fa-comments icon"></i>
+            <div class="content">
+                <div class="date">2018</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">You Texted me on Bakreid, 2018. I do not know why really but I was too happy. I saw you as a really perfect girl, I used to be really conscious while saying anything to you ki kuch bhi aisa na boldyu jisse tum offend hojao bht perfect si lagi tum, I asked you tumhe konsa course krna you said mujhe aalima krna. I always saw you out of my league. Mujh lagta tha ki I am non iman boy and you are way too out of my league.</p>            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-left">
+            <i class="fas fa-heart icon"></i>
+            <div class="content">
+                <div class="date">2019</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">The excietement phase began. Mujhe aj bhi nhi smjh ata why you fell in love with me kyuki na hi mai ache se bat krta tha na hi mai imaan wla tha na hi mai us wqt pdhta tha mera schedule gnda tha mujhe bat krne ka dhang nhi tha kuch nhi tha but you anyways loved me. And mai, mai bs with the flow jarha tha mujeh belive nhi tha koi ldki mujhse bat krrhi koi ladki mere lie wait krrhi merese pyar krrhi, maine zbrdasti propose krwaya but bad me mai hi doubt me agya ki mai pyar krta hu ya nhi mujhe career dikhne laga aur feel hua i am just wasting your life. Aur what happened next i think i should not discuss on this day.</p>            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-right">
+            <i class="fas fa-broken-heart icon"></i>
+            <div class="content">
+                <div class="date">2020</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">Breakup happened. Mai socha mai bht perrfect kr lunga apni life ab. but at the same time i had a soft corner for you i used to check ki pdh rahi tum ya nhi kya klrrhi kaha admission lerhi and when time went by mera JEE hua tb mujhe realise hua ki you never came in my way of study and i never became a better person by removing you from my life.</p>            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-left">
+            <i class="fas fa-undo icon"></i>
+            <div class="content">
+                <div class="date">2021</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">Being Clueless after not getting selected aur literally life pe give up krne ke bad jb mai tumse bat kia i felt ki maine kya kia? Why did I leave you. At that time hme kuch nhi smjh arha tha ki pyar ye wo hme bs tha i want this girl to smile i want to make her smile make her forget all the pain be with her at all times. I did all i could and in the process i fell in love with all the good qualities of yours, you made me a better person hr aitbar se deen duniya hr kuch. I decided only you could be my wife no one else.</p>            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-right">
+            <i class="fas fa-trap icon"></i>
+            <div class="content">
+                <div class="date">2022-2023</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">In the meanwhile between you and me there came another person called shaytan. We did so much we should not have. Lekin isme bhi is postive ye hai ki we realised and we left as soon as we did realise.</p>            </div>
+        </div>
+
+        <div class="milestone" data-aos="fade-left">
+            <i class="fas fa-peace icon"></i>
+            <div class="content">
+                <div class="date">The Sabr Phase</div>
+                <p style="font-family: 'Times New Roman', Times, serif;">
+                    Left it to Allah. Aur abhi past ka kuch bhi sochke ya anything jo hua bura acha, jo bhi maine tumhe glt feel kraya hr ek mauke har ek point pe ya mujhe jo bhi tumhra laga wo sb piche chhorke although it is not tough but islam is all about sacrifices, Duniya is all about sacrifices aur pura bharosa agar sacrifice kie to milega Inshaallah. It's all about tawakkul and sabr.
+                   </p>            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
